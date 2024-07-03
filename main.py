@@ -8,8 +8,8 @@ import seaborn as sns
 rng = np.random.default_rng(42)
 
 # Determine the number of paths and points per path
-points = 1000
-paths = 50
+points = 2000
+paths = 1
 
 # Create the initial set of random normal draws
 mu, sigma = 0.0, 1.0
@@ -37,7 +37,7 @@ plt.show()
 
 # Obtain the set of final path values
 final_values = pd.DataFrame({'final_values': W[:, -1]})
-
+"""
 # Estimate and plot the distribution of these final values with Seaborn
 fig, ax = plt.subplots(1, 1, figsize=(12, 8))
 sns.kdeplot(data=final_values, x='final_values', fill=True, ax=ax)
@@ -48,3 +48,4 @@ plt.show()
 
 # Output the mean and stdev of these final values
 print(final_values.mean(), final_values.std())
+"""
